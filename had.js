@@ -18,8 +18,8 @@ class Had {
         return sql;
     }
     static searchHad(search) {
-        let sql = `SELECT * FROM HAD WHERE name LIKE '%${search}%' or text LIKE '%${search}%'`;
-        return sql;
+            let sql = `SELECT * FROM HAD WHERE name LIKE '%${search}%' or text LIKE '%${search}%'`;
+            return sql;
     }
 
     static deleteHadById(id) {
