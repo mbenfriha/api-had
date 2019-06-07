@@ -28,7 +28,8 @@ class Had {
     }
 
     static getAllHad() {
-        let sql = `SELECT * FROM Had`;
+        let sql = `SELECT * FROM had inner join category_had on had.id = category_had.had_id inner join (select name as category, id from category) c on c.id=category_had.category_id
+        `;
         return sql;
     }
 }
