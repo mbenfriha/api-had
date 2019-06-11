@@ -1,4 +1,23 @@
-import mysql from "mysql";
+'user strict';
+
+var mysql = require('mysql');
+
+//local mysql db connection
+var connection = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'root',
+    password : 'root',
+    database : 'had',
+    port     : 8889
+});
+
+connection.connect(function(err) {
+    if (err) throw err;
+});
+
+module.exports = connection;
+
+/*import mysql from "mysql";
  
 const pool = mysql.createPool({
             connectionLimit : 10,
@@ -39,4 +58,5 @@ function query(sql, callback) {
  
 module.exports = {
     query: query
-}
+}*/
+
